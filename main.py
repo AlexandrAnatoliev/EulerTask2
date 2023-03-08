@@ -13,12 +13,12 @@ def get_fib_number(n):
     :param n: номер числа в ряду
     :return: значение
     """
-    f = [1, 1]
-    if n <= 1:
-        return 1
+    f = [1, 2]
+    if n <= 2:
+        return f[n - 1]
     else:
-        for i in range(2, n + 1):
-            f.append(f[i - 1] + f[i - 2])
+        for i in range(3, n + 1):
+            f.append(f[i - 2] + f[i - 3])
         return f[-1]
 
 
